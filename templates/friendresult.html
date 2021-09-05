@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="#" th:action="@{/index}" th:object="${friend}" method="post">
+	
+    <h1>My friends</h1>
+    	<table>
+		<tr th:each="friend: ${friends}">
+			<td th:text="${friend.friend}"></td>
+		</tr>
+				
+		</table>
+		
+		<a href="/friendlist">Submit</a>
+</form>   
+</body>
+</html>
